@@ -32,8 +32,9 @@ There are four related entities in this application:
 - ### Team:
   > Team is an entity that has many employees and projects
     - **Endpoints**:
-        - <mark>/team/</mark> -- get all the team resources
-        - <mark>/team/:id</mark> -- finds a specific teams resources fetched eagerly
+        - <mark>/team/</mark> -- get all teams, create or delete the team
+        - <mark>/team/:id</mark> -- find a specific team, update it or delete it
+        - <mark>/team/:teamId/project/:projectId</mark> -- adds a project with given id to the team
     - **Attributes**:
         - <mark>id</mark> long -- The id of this team.
         - <mark>teamName</mark> string -- The name of this team.
@@ -45,8 +46,9 @@ There are four related entities in this application:
 - ### Employee:
   > Employee is an entity that has a team, an intern and projects
     - **Endpoints**:
-        - <mark>/employee/</mark> -- get all the employee resources
-        - <mark>/employee/:id</mark> -- finds a specific employees resources fetched eagerly
+        - <mark>/employee/</mark> -- get all employees, create or delete the employee
+        - <mark>/employee/:id</mark> -- find a specific employee, update it or delete it
+        - <mark>/employee/:employeeId/project/:projectId</mark> -- adds a project with given id to the employee
     - **Attributes**:
         - <mark>id</mark> long -- The id of this employee.
         - <mark>firstName</mark> string -- The first name of this employee.
@@ -59,8 +61,8 @@ There are four related entities in this application:
 - ### Intern:
   > Intern is an entity that has a buddy (employee).
     - **Endpoints**:
-        - <mark>/intern/</mark> -- get all the intern resources
-        - <mark>/intern/:id</mark> -- finds a specific interns resources fetched eagerly
+        - <mark>/intern/</mark> -- get all interns, create or delete the intern
+        - <mark>/intern/:id</mark> -- find a specific intern, update it or delete it
     - **Attributes**:
         - <mark>id</mark> long -- The id of this intern.
         - <mark>firstName</mark> string -- The first name of this intern.
@@ -72,8 +74,8 @@ There are four related entities in this application:
 - ### Project:
   > Project is an entity resource is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY.
     - **Endpoints**:
-        - <mark>/project/</mark> -- get all the project resources
-        - <mark>/project/:id</mark> -- finds a specific projects resources
+        - <mark>/project/</mark> -- get all project, create or delete the project
+        - <mark>/project/:id</mark> -- find a specific project, update it or delete it
     - **Attributes**:
         - <mark>id</mark> long -- The id of this project.
         - <mark>isActive</mark> boolean -- The status of this project.
